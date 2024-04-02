@@ -1,8 +1,6 @@
 import streamlit as st
 import webbrowser 
 
-url = "7blue.in"
-
-
+url = st.text_input(label="Enter URL")
 res = webbrowser.open(url)
 st.write(res)
