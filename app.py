@@ -1,8 +1,6 @@
 import streamlit as st
 
 
-# Get the URL from the user
 url = st.text_input('Enter a URL')
-
-# Display the iFrame for the provided URL
-st.markdown(f'<iframe src="{url}" width="700" height="450"></iframe>', unsafe_allow_html=True)
+if st.button('Submit'):
+    st.markdown(f'<iframe src="{url}" width="1920" height="1080"></iframe>', unsafe_allow_html=True)
