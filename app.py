@@ -1,6 +1,10 @@
 import streamlit as st
-import webbrowser 
 
-url = st.text_input(label="Enter URL")
-st.write("Results for : ",url)
-st.write(webbrowser.open(url))
+# Title of your app
+st.title('My Virtual Browser')
+
+# Get the URL from the user
+url = st.text_input('Enter a URL')
+
+# Display the iFrame for the provided URL
+st.markdown(f'<iframe src="{url}" width="700" height="450"></iframe>', unsafe_allow_html=True)
